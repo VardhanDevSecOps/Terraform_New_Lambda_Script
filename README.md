@@ -3,7 +3,8 @@ terraform-lambda-project/
 ├── lambda/
 │   ├── lambda_function.py
 │   └── build.sh
-│
+
+
 ├── layers/
 │   ├── layer1/
 │   │   ├── python/
@@ -14,7 +15,8 @@ terraform-lambda-project/
 │   │   ├── python/
 │   │   │   └── numpy/
 │   │   └── build.sh
-│
+
+
 ├── terraform/
 │   ├── lambda.tf
 │   ├── layers.tf
