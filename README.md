@@ -29,4 +29,4 @@ terraform/
 
 layer.zip
 └── python/
-    └── <libraries>
+    └── <libraries> 
