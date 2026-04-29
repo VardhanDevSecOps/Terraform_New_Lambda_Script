@@ -23,6 +23,9 @@ terraform-lambda-project/
    └── s3.tf
    └── iam.tf
    └── provider.tf
+   
+terraform/
+├── eventbridge.tf   ✅ (new file)
 
 layer.zip
 └── python/
