@@ -28,5 +28,6 @@ terraform/
 ├── eventbridge.tf   ✅ (new file)
 
 layer.zip
-└── python/
+└── python
+
     └── <libraries> 
