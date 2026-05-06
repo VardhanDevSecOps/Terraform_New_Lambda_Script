@@ -43,19 +43,20 @@ Install the following tools before execution:
 
 **1. Install AWS CLI**
    
-Ubuntu
+**Ubuntu**
+
 sudo apt update
 sudo apt install awscli -y
 
 Verify:
 
-aws --version
+**aws --version**
 
 ----------------------------------------------------------------------------------------------------------------------
 
 **2. Install Terraform**
    
-Ubuntu
+**Ubuntu**
 
 sudo apt update && sudo apt install -y gnupg software-properties-common curl
 
@@ -66,8 +67,15 @@ sudo apt-add-repository \
 
 sudo apt update && sudo apt install terraform -y
 
-Verify:
+**Verify:**
 
-terraform -version
+**terraform -version**
 
 ---------------------------------------------------------------------------------------------------------------------
+
+**3. Configure AWS Credentials**
+
+<img width="1042" height="540" alt="image" src="https://github.com/user-attachments/assets/324631c8-dc7a-4f81-a668-b22d8bc53c6e" />
+
+
+
