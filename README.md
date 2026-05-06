@@ -94,8 +94,36 @@ Output: json
 ----------------------------------------------------------------------------------------------------------------------
 
 **Clone Repository**
+```
+git clone https://github.com/VardhanDevSecOps/Terraform_New_Lambda_Script.git
+```
+```
+cd Terraform_New_Lambda_Script
+```
+----------------------------------------------------------------------------------------------------------------------
 
+**Lambda Function**
 
+**lambda_function.py**
+
+This file contains the Python Lambda source code.
+
+**Example:**
+
+```
+import json
+
+def lambda_handler(event, context):
+
+    print("Event Received:", event)
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Lambda Executed Successfully')
+    }
+```
+
+----------------------------------------------------------------------------------------------------------------------
 
 
 
