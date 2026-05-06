@@ -75,7 +75,8 @@ sudo apt update && sudo apt install terraform -y
 
 **3. Configure AWS Credentials**
 
-<> bash
+**<> bash**
+
 aws configure
 
 Provide:
