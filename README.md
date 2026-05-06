@@ -42,6 +42,7 @@ Prerequisites
 Install the following tools before execution:
 
 1. Install AWS CLI
+   
 Ubuntu
 sudo apt update
 sudo apt install awscli -y
@@ -49,10 +50,13 @@ sudo apt install awscli -y
 Verify:
 
 aws --version
+
 ----------------------------------------------------------------------------------------------------------------------
 
 2. Install Terraform
+   
 Ubuntu
+
 sudo apt update && sudo apt install -y gnupg software-properties-common curl
 
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -65,4 +69,5 @@ sudo apt update && sudo apt install terraform -y
 Verify:
 
 terraform -version
+
 ---------------------------------------------------------------------------------------------------------------------
