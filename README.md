@@ -58,7 +58,7 @@ Verify:
 **2. Install Terraform**
    
 **Ubuntu**
-
+```
 sudo apt update && sudo apt install -y gnupg software-properties-common curl
 
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -67,7 +67,7 @@ sudo apt-add-repository \
 "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
 sudo apt update && sudo apt install terraform -y
-
+```
 **Verify:**
 
 **terraform -version**
@@ -77,16 +77,16 @@ sudo apt update && sudo apt install terraform -y
 **3. Configure AWS Credentials**
 
 **<> bash**
-
+```
 aws configure
-
+```
 **Provide:**
-
+```
 AWS Access Key ID |
 AWS Secret Access Key |
 Region Name |
 Output Format
-
+```
 **Example:**
 
 Region: ap-south-1
