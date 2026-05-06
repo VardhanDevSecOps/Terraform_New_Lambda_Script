@@ -81,9 +81,9 @@ aws configure
 
 Provide:
 
-AWS Access Key ID
-AWS Secret Access Key
-Region Name
+AWS Access Key ID |
+AWS Secret Access Key |
+Region Name |
 Output Format
 
 Example:
