@@ -75,7 +75,20 @@ sudo apt update && sudo apt install terraform -y
 
 **3. Configure AWS Credentials**
 
-<img width="1042" height="540" alt="image" src="https://github.com/user-attachments/assets/324631c8-dc7a-4f81-a668-b22d8bc53c6e" />
+<> bash
+aws configure
 
+Provide:
+
+AWS Access Key ID
+AWS Secret Access Key
+Region Name
+Output Format
+
+Example:
+
+Region: ap-south-1
+Output: json
+----------------------------------------------------------------------------------------------------------------------
 
 
