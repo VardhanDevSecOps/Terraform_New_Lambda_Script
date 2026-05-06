@@ -50,9 +50,9 @@ sudo apt update
 sudo apt install awscli -y
 ```
 Verify:
-
+```
 **aws --version**
-
+```
 ----------------------------------------------------------------------------------------------------------------------
 
 **2. Install Terraform**
@@ -69,9 +69,9 @@ sudo apt-add-repository \
 sudo apt update && sudo apt install terraform -y
 ```
 **Verify:**
-
+```
 **terraform -version**
-
+```
 ---------------------------------------------------------------------------------------------------------------------
 
 **3. Configure AWS Credentials**
