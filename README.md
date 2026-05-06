@@ -41,7 +41,7 @@ Prerequisites
 
 Install the following tools before execution:
 
-1. Install AWS CLI
+**1. Install AWS CLI**
    
 Ubuntu
 sudo apt update
@@ -53,7 +53,7 @@ aws --version
 
 ----------------------------------------------------------------------------------------------------------------------
 
-2. Install Terraform
+**2. Install Terraform**
    
 Ubuntu
 
