@@ -125,10 +125,39 @@ def lambda_handler(event, context):
 
 ----------------------------------------------------------------------------------------------------------------------
 
+**Build Lambda ZIP File**
+```
+Method 1 — Using Existing ZIP
+```
+**Already available:**
+```
+lambda.zip
+```
+**Method 2 — Build Manually**
+```
+zip lambda.zip lambda_function.py
+```
+----------------------------------------------------------------------------------------------------------------------
+**Lambda Layers**
 
+Lambda Layers help reuse external Python libraries.
+----------------------------------------------------------------------------------------------------------------------
+**Layer 1 — requests Package**
 
-
-
+**Navigate**
+```
+cd layers/layer1/python
+```
+**Install Package**
+```
+pip install requests -t .
+```
+**Create ZIP**
+```
+cd ..
+zip -r requests_layer.zip python
+```
+----------------------------------------------------------------------------------------------------------------------
 
 
 
