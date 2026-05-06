@@ -45,9 +45,10 @@ Install the following tools before execution:
    
 **Ubuntu**
 
+```bash
 sudo apt update
 sudo apt install awscli -y
-
+```
 Verify:
 
 **aws --version**
@@ -79,17 +80,45 @@ sudo apt update && sudo apt install terraform -y
 
 aws configure
 
-Provide:
+**Provide:**
 
 AWS Access Key ID |
 AWS Secret Access Key |
 Region Name |
 Output Format
 
-Example:
+**Example:**
 
 Region: ap-south-1
 Output: json
 ----------------------------------------------------------------------------------------------------------------------
+
+**Clone Repository**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
