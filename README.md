@@ -430,14 +430,15 @@ Correct example:
 ----------------------------------------------------------------------------------------------------------------------
 **Useful Terraform Commands**
 ```
-   Command                    Purpose                  
- terraform init           Initialize Terraform     
- terraform fmt            Format files             
- terraform validate       Validate syntax          
- terraform plan           Preview resources        
- terraform apply          Deploy resources         
- terraform destroy        Delete resources         
- terraform state list     Show Terraform resources 
+   Command                      Purpose
+                                      
+ terraform init              Initialize Terraform     
+ terraform fmt               Format files             
+ terraform validate          Validate syntax          
+ terraform plan              Preview resources        
+ terraform apply             Deploy resources         
+ terraform destroy           Delete resources         
+ terraform state list        Show Terraform resources 
 
 ```
 ----------------------------------------------------------------------------------------------------------------------
