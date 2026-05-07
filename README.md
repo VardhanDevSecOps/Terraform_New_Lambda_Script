@@ -264,6 +264,191 @@ terraform init
 Terraform has been successfully initialized!
 ```
 ----------------------------------------------------------------------------------------------------------------------
+**Step 2 — Validate Terraform**
+```
+terraform fmt; terraform validate
+```
+**Expected Output:**
+```
+Success! The configuration is valid.
+```
+----------------------------------------------------------------------------------------------------------------------
+**Step 3 — Check Terraform Plan**
+```
+terraform plan
+```
+Terraform shows all AWS resources that will be created.
+
+----------------------------------------------------------------------------------------------------------------------
+**Step 4 — Deploy Infrastructure**
+```
+terraform apply
+```
+**Type:**
+
+yes
+
+**Terraform creates:**
+
+   * Lambda
+   * Lambda Layers
+   * EventBridge Rule
+   * SQS Queue
+   * IAM Role
+   * S3 Bucket
+----------------------------------------------------------------------------------------------------------------------
+**Verify in AWS Console**
+After deployment verify in AWS Console:
+----------------------------------------------------------------------------------------------------------------------
+**1. Lambda**
+
+Open:
+
+Amazon Web Services Lambda Console
+
+Verify:
+
+   * Function created
+   * Layers attached
+   * Monitoring logs available
+----------------------------------------------------------------------------------------------------------------------
+**2. EventBridge**
+
+Open:
+
+Amazon Web Services EventBridge Console
+
+Verify:
+
+   * Scheduled rule created
+   * Lambda target attached
+----------------------------------------------------------------------------------------------------------------------
+**3. SQS**
+
+Open:
+
+Amazon Web Services SQS Console
+
+Verify:
+
+   * Queue created successfully
+
+----------------------------------------------------------------------------------------------------------------------
+**4. CloudWatch Logs**
+
+Open:
+
+Amazon Web Services CloudWatch
+
+Verify Lambda logs:
+```
+  /aws/lambda/<lambda-function-name>
+```
+----------------------------------------------------------------------------------------------------------------------
+**Test Lambda Manually
+Invoke Lambda**
+```
+  aws lambda invoke \
+    --function-name terraform-lambda-function \
+  response.json
+```
+Check response:
+```
+  cat response.json
+```
+----------------------------------------------------------------------------------------------------------------------
+**Trigger EventBridge Manually
+Put Custom Event**
+```
+    aws events put-events --entries file://event.json
+```
+----------------------------------------------------------------------------------------------------------------------
+**Destroy Infrastructure**
+
+To remove all AWS resources:
+```
+     terraform destroy
+```
+Type: 
+```
+     Yes
+```
+**Note:** Don't give --auto-approve while destroying the resources.
+
+----------------------------------------------------------------------------------------------------------------------
+**Common Errors & Fixes**
+----------------------------------------------------------------------------------------------------------------------
+**1. ZIP File Too Large
+Fix**
+
+Use Lambda Layers for dependencies instead of adding everything into lambda.zip.
+
+----------------------------------------------------------------------------------------------------------------------
+**2. Access Denied Error
+Fix**
+
+Verify:
+```
+    aws configure
+```
+Check IAM permissions.
+
+----------------------------------------------------------------------------------------------------------------------
+**3. EventBridge Rule Not Visible
+Fix**
+
+Check correct AWS Region:
+```
+    aws configure get region
+```
+Also verify:
+
+   * EventBridge Console
+   * Rules Section
+   * Same deployment region
+----------------------------------------------------------------------------------------------------------------------
+**4. Terraform State Issues
+Fix**
+
+Refresh Terraform state:
+```
+    terraform refresh
+```
+----------------------------------------------------------------------------------------------------------------------
+**5. Lambda Layer Import Error
+Fix**
+
+Verify layer structure:
+```
+    python/package_name
+```
+Correct example:
+```
+   python/requests
+   python/numpy 
+```
+----------------------------------------------------------------------------------------------------------------------
+**Useful Terraform Commands**
+```
+    | Command              | Purpose                  |
+| -------------------- | ------------------------ |
+| terraform init       | Initialize Terraform     |
+| terraform fmt        | Format files             |
+| terraform validate   | Validate syntax          |
+| terraform plan       | Preview resources        |
+| terraform apply      | Deploy resources         |
+| terraform destroy    | Delete resources         |
+| terraform state list | Show Terraform resources |
+
+```
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
