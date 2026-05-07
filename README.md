@@ -430,21 +430,37 @@ Correct example:
 ----------------------------------------------------------------------------------------------------------------------
 **Useful Terraform Commands**
 ```
-    | Command              | Purpose                  |
-| -------------------- | ------------------------ |
-| terraform init       | Initialize Terraform     |
-| terraform fmt        | Format files             |
-| terraform validate   | Validate syntax          |
-| terraform plan       | Preview resources        |
-| terraform apply      | Deploy resources         |
-| terraform destroy    | Delete resources         |
-| terraform state list | Show Terraform resources |
+   Command                    Purpose                  
+ terraform init           Initialize Terraform     
+ terraform fmt            Format files             
+ terraform validate       Validate syntax          
+ terraform plan           Preview resources        
+ terraform apply          Deploy resources         
+ terraform destroy        Delete resources         
+ terraform state list     Show Terraform resources 
 
 ```
 ----------------------------------------------------------------------------------------------------------------------
+Example Terraform State Check
+```
+      terraform state list
+```
+Example Output:
+```
+aws_lambda_function.lambda_function
+aws_lambda_layer_version.requests_layer
+aws_lambda_layer_version.numpy_layer
+aws_sqs_queue.eventbridge_queue
+aws_cloudwatch_event_rule.lambda_schedule
+```
+----------------------------------------------------------------------------------------------------------------------
+**Author**
 
+GitHub Repository:
+Terraform_New_Lambda_Script
 
-
+Maintained by:
+**Vardhan Kandregula**
 
 
 
